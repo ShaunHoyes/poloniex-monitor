@@ -1,0 +1,33 @@
+{
+  "name": "poloniex-monitor",
+  "version": "0.0.5",
+  "description": "externally manage Poloniex exchange activity ",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaunHoyes/poloniex-monitor.git"
+  },
+  "keywords": [
+    "poloniex",
+    "bitcoin",
+    "cryptocurrency",
+    "exchange",
+    "altcoins"
+  ],
+  "author": "Shaun Hoyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShaunHoyes/poloniex-monitor/issues"
+  },
+  "homepage": "https://github.com/ShaunHoyes/poloniex-monitor#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "moment": "^2.18.1"
+  }
+}
