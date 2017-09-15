@@ -5,7 +5,7 @@ be sure to use the `constants-template.js` file as a guide to store your global 
 
 ## Features
 * monitor account balances, activity, and history
-* create margin loans
+* issue new margin loans
 * cancel margin loans
 * renew margin loans
 * generate new deposit addresses for all currencies
