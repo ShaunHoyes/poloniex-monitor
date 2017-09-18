@@ -9,3 +9,5 @@ be sure to use the `constants-template.js` file as a guide to store your global 
 * cancel margin loans
 * renew margin loans
 * generate new deposit addresses for all currencies
+
+This repo heavily focuses on the margin-lending side of the Poloniex infrastructure.

@@ -2,6 +2,11 @@
 const api = require('/Users/home/poloniex-api.js');
 const Poloniex = require('./lib/poloniex');
 const Table = require('cli-table');
+require('./lendingRates/btc');
+require('./lendingRates/eth');
+require('./lendingRates/ltc');
+require('./lendingRates/xmr');
+require('./lendingRates/bts');
 
 api.poloniex.returnActiveLoans(function(err, data) {
   console.log("Poloniex Active Loans:");
