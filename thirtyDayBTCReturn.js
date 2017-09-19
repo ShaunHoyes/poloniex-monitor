@@ -1,14 +1,17 @@
 'use strict';
 // returns your 30-day BTC margin lending return
-const api = require('/Users/home/poloniex-api.js');
-const colors = require('colors');
-const moment = require('moment');
+
+const
+  api = require('/Users/home/poloniex-api.js'),
+  colors = require('colors'),
+  moment = require('moment');
 
 api.Poloniex.STRICT_SSL = false;
 
-let start = moment().subtract(1, 'month').unix();
-let end = moment().unix();
-let thirtyDayReturn = 0;
+let
+  start = moment().subtract(1, 'month').unix(),
+  end = moment().unix(),
+  thirtyDayReturn = 0;
 
 api.poloniex.returnLendingHistory(start, end, function(err, body) {
   if (err) {

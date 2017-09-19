@@ -1,5 +1,5 @@
 'use strict';
-// to return open loan offers for each currency
+// returns open loan offers for each currency in json format
 
 const api = require('/Users/home/poloniex-api.js');
 

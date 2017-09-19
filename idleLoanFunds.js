@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 // returns all idle funds in margin lending account
 const api = require('/Users/home/poloniex-api.js');
 const Table = require('cli-table');
