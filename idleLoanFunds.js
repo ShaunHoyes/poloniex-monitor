@@ -8,5 +8,8 @@ api.poloniex.returnAvailableAccountBalances('all', function(err, data) {
     console.log(err);
     return;
   };
-  console.log(data);
+  for (let i = 0; i < Object.keys(data).length; i ++) {
+    console.log(Object.keys(data)[i], "account: ", data[Object.keys(data)[i]]);
+  }
+
 });

@@ -1,6 +1,6 @@
 'use strict';
 // create a BTC loan offer using all available funds
-// currently set to execute at the 10th listed offer rate, autoRenew, and for a 10-day duration
+// currently set to execute at the 10th listed offer rate, autoRenew, and for a 30-day duration
 const api = require('/Users/home/poloniex-api.js');
 const currency = 'BTC';
 
@@ -9,7 +9,7 @@ api.poloniex.returnAvailableAccountBalances('all', function(err, data) {
   api.poloniex.returnLoanOrders(currency, function(err, dataRates) {
     const lendingRate = dataRates.offers[10].rate;
     if (idleFunds >= 0.01) {
-      api.poloniex.createLoanOffer('BTC', idleFunds, 15, 1, lendingRate, function(err, dataOffer) {
+      api.poloniex.createLoanOffer('BTC', idleFunds, 30, 1, lendingRate, function(err, dataOffer) {
         console.log(dataOffer);
       });
     } else {
