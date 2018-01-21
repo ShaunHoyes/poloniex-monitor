@@ -7,7 +7,11 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "loans": "node returnActiveLoans.js",
+    "active": "node activeBTCLoanCount.js",
+    "create": "node createBTCLoanOffer.js",
+    "open": "node open-offers.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +32,7 @@
   "homepage": "https://github.com/ShaunHoyes/poloniex-monitor#readme",
   "dependencies": {
     "autobahn": "^17.5.2",
+    "cli-color": "^1.2.0",
     "cli-table": "^0.3.1",
     "cli-table2": "^0.2.0",
     "events": "^1.1.1",
