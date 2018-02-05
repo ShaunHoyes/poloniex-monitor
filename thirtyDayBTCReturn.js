@@ -1,8 +1,8 @@
-'use strict';
 // returns your 30-day BTC margin lending return
+'use strict';
 
 const
-  api = require('/Users/home/poloniex-api.js'),
+  api = require('/Users/shaunhoyes/poloniex-api.js'),
   colors = require('colors'),
   moment = require('moment');
 

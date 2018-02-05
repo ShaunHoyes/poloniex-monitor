@@ -3,7 +3,7 @@
 // to execute via command line
   // $ node generateNewAddress.js < 3-letter currency code of address >
 
-const api = require('/Users/home/poloniex-api.js');
+const api = require('/Users/shaunhoyes/poloniex-api.js');
 
 api.Poloniex.STRICT_SSL = false;
 

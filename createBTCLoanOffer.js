@@ -1,7 +1,7 @@
 'use strict';
 // create a BTC loan offer using all available funds
 // currently set to execute at the 10th listed offer rate, autoRenew, and for a 30-day duration
-const api = require('/Users/home/poloniex-api.js');
+const api = require('/Users/shaunhoyes/poloniex-api.js');
 const currency = 'BTC';
 
 api.poloniex.returnAvailableAccountBalances('all', function(err, data) {

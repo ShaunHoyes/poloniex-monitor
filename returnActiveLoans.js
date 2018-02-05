@@ -1,6 +1,6 @@
 // returns all active loans for all currencies
 const
-  api = require('/Users/home/poloniex-api.js'),
+  api = require('/Users/shaunhoyes/poloniex-api.js'),
   Poloniex = require('./lib/poloniex'),
   Table = require('cli-table2'),
   btcLending = require('./lendingRates/btc'),
@@ -8,9 +8,11 @@ const
   ltcLending = require('./lendingRates/ltc'),
   xmrLending = require('./lendingRates/xmr'),
   btsLending = require('./lendingRates/bts'),
-  strLending = require('./lendingRates/str');
+  strLending = require('./lendingRates/str'),
+  idleLoanFunds = require('./idleLoanFunds.js');
 
 api.poloniex.returnActiveLoans(function(err, data) {
+  console.log(`Available funds:`, idleLoanFunds.availableBTCBalance, `BTC`);
   console.log("Poloniex Active Loans:");
   let rateTable = new Table({
     head: ['currency', 'daily loan rate'],

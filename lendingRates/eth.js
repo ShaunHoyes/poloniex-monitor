@@ -1,5 +1,5 @@
 const
-  api = require('/Users/home/poloniex-api.js'),
+  api = require('/Users/shaunhoyes/poloniex-api.js'),
   currency = 'ETH';
 
 api.Poloniex.STRICT_SSL = false;

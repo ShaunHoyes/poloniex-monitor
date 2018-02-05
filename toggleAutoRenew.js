@@ -1,7 +1,5 @@
 'use strict';
-// toggle 'autoRenew' in margin loans
-// $ node toggleAutoRenew.js <ID Number>
-const api = require('/Users/home/poloniex-api.js');
+const api = require('/Users/shaunhoyes/poloniex-api.js');
 
 api.poloniex.toggleAutoRenew(process.argv[2], function(err, data) {
   if (err) {

@@ -1,8 +1,6 @@
 'use strict';
 // cancel open loan offer using order number
-// to execute via command line:
-    // $ node cancelLoanOffer.js <orderNumber>
-const api = require('/Users/home/poloniex-api.js');
+const api = require('/Users/shaunhoyes/poloniex-api.js');
 
 api.poloniex.cancelLoanOffer(process.argv[2], function(err, data) {
   if (err) {

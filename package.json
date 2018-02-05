@@ -11,7 +11,8 @@
     "loans": "node returnActiveLoans.js",
     "active": "node activeBTCLoanCount.js",
     "create": "node createBTCLoanOffer.js",
-    "open": "node open-offers.js"
+    "open": "node open-offers.js",
+    "return": "node thirtyDayBTCReturn.js"
   },
   "repository": {
     "type": "git",

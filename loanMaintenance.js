@@ -1,6 +1,6 @@
 'use strict';
 // loan maintenance for BTC only
-const api = require('/Users/home/poloniex-api.js');
+const api = require('/Users/shaunhoyes/poloniex-api.js');
 const currency = 'BTC'
 //////// 1. cancel all pending loan offers
 // return all open offers
@@ -20,7 +20,6 @@ api.poloniex.returnOpenLoanOffers(function(err, data) {
     });
   }
 });
-
 
 ////////// 2. If idle balance is greater than 0.01 BTC, issue new loan offer using default parameters
 api.poloniex.returnAvailableAccountBalances('all', function(err, data) {
