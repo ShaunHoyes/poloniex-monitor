@@ -22,6 +22,6 @@ api.poloniex.returnLendingHistory(start, end, function(err, body) {
       thirtyDayReturn += Number(body[i].earned);
     }
   }
-  console.log(colors.cyan("30-day return:"));
-  console.log(colors.cyan(Number(thirtyDayReturn).toFixed(8), "BTC"));
+  // console.log(colors.cyan("30-day return:"));
+  console.log("30-day return:", colors.cyan(Number(thirtyDayReturn).toFixed(8), "BTC"));
 });

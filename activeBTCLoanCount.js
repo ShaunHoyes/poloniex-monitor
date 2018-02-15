@@ -12,6 +12,6 @@ api.poloniex.returnActiveLoans(function(err, data) {
         btcBalance += Number(data.provided[i]['amount']);
       }
     }
-    console.log(api.clc.green(Number(btcBalance).toFixed(8), "BTC active"));
+    console.log("Active BTC: ", api.clc.green(Number(btcBalance).toFixed(8), "BTC"));
   }
 });
