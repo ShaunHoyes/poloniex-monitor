@@ -7,9 +7,9 @@ const currency = 'BTC';
 api.poloniex.returnAvailableAccountBalances('all', function(err, data) {
   const idleFunds = data[Object.keys(data)].BTC;
   api.poloniex.returnLoanOrders(currency, function(err, dataRates) {
-    const lendingRate = dataRates.offers[10].rate;
+    const lendingRate = dataRates.offers[12].rate;
     if (idleFunds >= 0.01) {
-      api.poloniex.createLoanOffer('BTC', idleFunds, 30, 1, lendingRate, function(err, dataOffer) {
+      api.poloniex.createLoanOffer('BTC', idleFunds, 35, 1, lendingRate, function(err, dataOffer) {
         console.log(dataOffer);
       });
     } else {
