@@ -18,6 +18,7 @@ api.poloniex.returnOpenLoanOffers(function(err, data) {
   if (data.length == 0) {
     console.log("There are currently no open orders.");
   } else {
+    console.log("Open Orders:");
     for (let i = 0; i < data.BTC.length; i++) {
       table.push(
         [data.BTC[i].id, data.BTC[i].rate, data.BTC[i].amount, data.BTC[i].duration, data.BTC[i].autoRenew]
