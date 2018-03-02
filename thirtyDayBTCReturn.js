@@ -1,27 +1,29 @@
 // returns your 30-day BTC margin lending return
-'use strict';
 
 const
   api = require('/Users/shaunhoyes/poloniex-api.js'),
   colors = require('colors'),
-  moment = require('moment');
+  moment = require('moment'),
+  poloniexExchangeApi = require('poloniex-exchange-api');
 
 api.Poloniex.STRICT_SSL = false;
 
+const today = new Date();
+
 let
-  start = moment().subtract(1, 'month').unix(),
+  start = moment().subtract(30, 'day').unix(),
   end = moment().unix(),
+
   thirtyDayReturn = 0;
 
-api.poloniex.returnLendingHistory(start, end, function(err, body) {
-  if (err) {
-    console.log('ERROR', err);
-  }
-  for (let i = 0; i < body.length; i += 1) {
-    if (body[i].currency == 'BTC') {
-      thirtyDayReturn += Number(body[i].earned);
-    }
-  }
-  // console.log(colors.cyan("30-day return:"));
-  console.log("30-day return:", colors.cyan(Number(thirtyDayReturn).toFixed(8), "BTC"));
-});
+  api.client.returnLendingHistory(start, end)
+        .then(response => {
+            const { status, data } = response;
+            for (let i = 0; i < data.length; i += 1) {
+              if (data[i].currency == 'BTC') {
+                thirtyDayReturn += Number(data[i].earned);
+              }
+            }
+            console.log("30-day return:", colors.cyan(thirtyDayReturn.toFixed(8), "BTC"));
+        })
+        .catch(err => console.error(err));
