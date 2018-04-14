@@ -37,8 +37,9 @@
     "cli-table": "^0.3.1",
     "cli-table2": "^0.2.0",
     "events": "^1.1.1",
-    "moment": "^2.18.1",
+    "moment": "^2.19.3",
     "nonce": "^1.0.4",
-    "poloniex-api-node": "^1.6.3"
+    "poloniex-api-node": "^1.6.3",
+    "poloniex-exchange-api": "^0.4.0"
   }
 }
