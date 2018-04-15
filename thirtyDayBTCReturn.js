@@ -8,9 +8,12 @@ const
 
 api.Poloniex.STRICT_SSL = false;
 
+const today = new Date();
+
 let
   start = moment().subtract(30, 'day').unix(),
   end = moment().unix(),
+
   thirtyDayReturn = 0;
 
 api.client.returnLendingHistory(start, end)
